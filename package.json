@@ -2,10 +2,10 @@
   "name": "quiz-game",
   "version": "1.0.0",
   "description": "",
-  "main": "runner.js",
+  "main": "vivodConsole.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node start"
+    "start": "node vivodConsole"
   },
   "keywords": [],
   "author": "",

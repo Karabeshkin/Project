@@ -10,18 +10,15 @@ class Generator {
   }
 
   static getQuestions(str) {
-    const reg = /[(а-я0-9)|,|\. ]+\?/gim;
+    const reg = /[(а-яё0-9)|,|. ]+\?/gim;
     return str.match(reg);
   }
 
   static getAnswers(str) {
-    const reg = /[(а-я0-9)|,| ]+(\.|!)/gim;
+    const reg = /[(а-яё0-9)|,| ]+(\.|!)/gim;
     return str.match(reg);
   }
 }
-
-// const question = Generator.getQuestions(Generator.findTheme(1));
-// const answer = Generator.getAnswers(Generator.findTheme(1))
 
 class QuestionAnswers {
   constructor(question, answer) {
