@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-let number = 1;
+const VivodTem = require('./vivodConsole')
+
 class Generator {
     static findTheme(number) {
         const themes = fs.readdirSync(path.join(__dirname, 'topics'));
@@ -19,8 +20,8 @@ class Generator {
 
 }
 
-const question = Generator.getQuestions(Generator.findTheme(1));
-const answer = Generator.getAnswers(Generator.findTheme(1))
+// const question = Generator.getQuestions(Generator.findTheme(1));
+// const answer = Generator.getAnswers(Generator.findTheme(1))
 
 
 class questionAnswers {
@@ -43,9 +44,10 @@ for (let i = 0; i < question.length; i += 1) {
  return arr;
 }
 
-console.log(QAGenerator(question, answer));
 
 
 module.exports = {
-    
+    Generator,
+    questionAnswers,
+    QAGenerator,
 }

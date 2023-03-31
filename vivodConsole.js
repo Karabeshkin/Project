@@ -2,6 +2,7 @@ const { error } = require("console");
 const fs = require("fs");
 const path = require("path");
 var readlineSync = require("readline-sync");
+const {Generator, questionAnswers, QAGenerator} = require('./questions');
 
 class VivodTem {
   // constructor() {}
@@ -14,16 +15,7 @@ class VivodTem {
 3.тема
 
 `);
-    if (userName == 1) {
-
-      console.log(`\nИван`);
-    }
-    if (userName == 2) {
-      console.log(`\nСтас`);
-    }
-    if (userName == 3) {
-      console.log(`\nМакс`);
-    }
+    console.log(QAGenerator(userName));
   }
 
   vivodVoprosov() {}
@@ -31,3 +23,5 @@ class VivodTem {
 }
 const civodTem = new VivodTem();
 civodTem.vivodTem();
+
+module.exports = VivodTem;
